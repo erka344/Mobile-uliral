@@ -58,6 +58,20 @@ class CartManager {
               );
             }).toList());
   }
+
+  Future<List<CartItem>> getCartItemsOnce() async {
+  final user = _auth.currentUser;
+  if (user == null) return []; // ✔ Зөв: хоосон List<CartItem> буцаана
+
+  final snapshot = await FirebaseFirestore.instance
+      .collection('carts')
+      .doc(user.uid)
+      .collection('items')
+      .get();
+
+  return snapshot.docs.map((doc) => CartItem.fromMap(doc.data())).toList();
+}
+
 }
 
 class CartItem {
@@ -65,4 +79,11 @@ class CartItem {
    int quantity;
 
   CartItem({required this.productId, required this.quantity});
+
+  factory CartItem.fromMap(Map<String, dynamic> map) {
+    return CartItem(
+      productId: map['productId'],
+      quantity: map['quantity'] ?? 1,
+    );
+  }
 }

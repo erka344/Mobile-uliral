@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "147016468490",
+    "project_id": "uliral-bc390",
+    "storage_bucket": "uliral-bc390.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147016468490:android:b2699405ba7563991077f3",
+        "android_client_info": {
+          "package_name": "com.example.shop_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0o6uwH0wGJyLfrF4MStA6Hzsn8U4ApEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147016468490:android:c6a866f6b8533b631077f3",
+        "android_client_info": {
+          "package_name": "com.example.uliral"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0o6uwH0wGJyLfrF4MStA6Hzsn8U4ApEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
